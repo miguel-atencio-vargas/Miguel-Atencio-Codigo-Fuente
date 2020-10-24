@@ -1,0 +1,32 @@
+extends includes/layout
+
+block title
+	title Blog Personal
+block vendorsJS
+	//- './assets/js/turbolinks.js'
+	- let src = ['./assets/js/vendors/slick.js']
+	each link in src
+		script(type='text/javascript', src=link, defer)
+
+block vendorsCSS
+	- let href = ['./assets/css/vendors/slick.css']
+	each link in href
+		link(rel="stylesheet", href=link)
+
+block container
+	- let skills = ['Desarrollo Web', 'Programación Competitiva', 'Estructuras de Datos', 'GNU/Linux', 'Matemáticas y estadística', 'Inteligencia Artificial', 'Arquitectura de Sistemas']
+	- let softSkills = ['Ingles', 'Razonamiento y psicotecnica', 'Trabajo en equipo', 'UML']
+	.section
+		.c-home
+			.c-home-title
+				h2 BIENVENIDO A MI PORTAFOLIO
+				p En este sitio web puedes encontrar  mis proyectos y mi camino de aprendizaje donde comparto a la comunidad todas las experiencias de aprendizaje que la misma comunidad me brindó.
+				p Las areas de aprendizaje fueron:
+				for skill in skills
+					h2= skill
+				p También tuve que mejorar en habilidades como:
+				for skill in softSkills
+					h2= skill
+			.c-home-ilustration
+				img(src="./assets/images/home.svg")
+	.section.c-footer.fp-auto-height

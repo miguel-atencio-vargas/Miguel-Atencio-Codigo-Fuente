@@ -1,0 +1,32 @@
+/**
+ *
+ * == font-face() ==
+ * Agregar fuentes tipo texto o icon si se usa con el mixin font-icon()
+ * ----------------------------------------------------------------------------
+ *
+ * Ejemplo 1: pasando solo 3 parametros, nombre de fuente, archivo e id svg
+
+**  font-face('Open Sans', open-sans, $id-svg: opensans)
+**  font-face('Roboto Condensed', roboto-condensed, bold, italic, $id-svg:roboto)
+**  font-face(Lato, 'directorio/lato', 500, normal, $id-svg:lato)
+ *
+ */
+
+font-face($name, $src, $weight, $style)
+	@font-face
+		font-family: $name
+		src: url($font-path + $src + '.woff2') format('woff2'),
+			 url($font-path + $src + '.woff') format('woff')
+		font-weight: $weight
+		font-style: $style
+/*----------------------------------------------------------------------------*
+	$FONTS
+*----------------------------------------------------------------------------*/
+
+/**
+ *
+ * Definir las fuentes tipográficas en "base/config.styl".
+ *
+ */
+for font-name, val in $fonts
+	font-face(val.name, val.src, val.weight, val.style)
