@@ -1,7 +1,7 @@
 /**----------------------------------------------------------------------------
-   $CONFIG
-   Este es el corazón del framework. Contiene la configuración global
-   para todos los archivos.
+	$CONFIG
+	Este es el corazón del framework. Contiene la configuración global
+	para todos los archivos.
 *----------------------------------------------------------------------------
 **/
 /**
@@ -67,6 +67,54 @@ $fonts = {
 		style  : normal
 	},
 	f5: {
+		name   : 'Nunito',
+		src    : 'nunito-extralight',
+		weight : 200,
+		style  : normal
+	},
+	f6: {
+		name   : 'Nunito',
+		src    : 'nunito-lightitalic',
+		weight : 300,
+		style  : italic
+	},
+	f7: {
+		name   : 'Nunito',
+		src    : 'nunito-light',
+		weight : 300,
+		style  : normal
+	},
+	f8: {
+		name   : 'Nunito',
+		src    : 'nunito-regular',
+		weight : 400,
+		style  : normal
+	},
+	f9: {
+		name   : 'Nunito',
+		src    : 'nunito-italic',
+		weight : 400,
+		style  : italic
+	},
+	f10: {
+		name   : 'Nunito',
+		src    : 'nunito-semibold',
+		weight : 600,
+		style  : bold
+	},
+	f11: {
+		name   : 'Nunito',
+		src    : 'nunito-bold',
+		weight : 700,
+		style  : bold
+	},
+	f12: {
+		name   : 'Nunito',
+		src    : 'nunito-extrabold',
+		weight : 800,
+		style  : bold
+	},
+	f13: {
 		name   : 'RussoOne',
 		src    : 'RussoOne-Regular',
 		weight : 500,
@@ -94,15 +142,11 @@ $base-line-height  = 1.2
  * Usado para hacer los calculos con la unidad de medida `rem`.
  * Se recomienda usar como base 10px, así mentalmente el calculo se hará más
  * rápido. Por ejemplo:
-
---   2rem equivalen a 20px
---   5rem equivalen a 50px
---   1.5rem equivalen a 15px
---   .8rem equivalen a 8px
-
+--   2rem equivalen a 20px  --   5rem equivalen a 50px --   1.5rem equivalen a 15px --   .8rem equivalen a 8px
  *
  */
-$base-font-size = 6px
+ 
+ $base-font-size = 10
 
 
 /**
@@ -168,15 +212,17 @@ $p-font-size     = $text-size.normal
  * Define los colores principales de la interfaz gráfica
  *
  */
+
+// Color para la fuente
 $base-color       = #FFF5E4
 $base-color-light = lighten($base-color, 30%)
 $base-color-dark  = darken($base-color, 30%)
 
-$base2-color       = #303C42
-$base2-color-light = lighten($base-color, 30%)
-$base2-color-dark  = darken($base-color, 30%)
+$base2-color        = #21FFD6
+$base2-color-light  = lighten($base-color, 30%)
+$base2-color-dark   = darken($base-color, 30%)
 
-$base3-color        = #3847A8
+$base3-color        = #FFC708
 $base3-color-light  = lighten($base-color, 30%)
 $base3-color-dark   = darken($base-color, 30%)
 
@@ -211,7 +257,7 @@ $base-link-color-hover = $base-color
  * Color por defecto para el background
  *
  */
-$base-color-background = #000
+$base-color-background = #05192d
 /* ^Fin - Colores
 -----------------------------------------------------------------------------*/
 

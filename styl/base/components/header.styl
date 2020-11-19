@@ -4,6 +4,7 @@
 // Elemento padre del g-container
 .c-fixed
 	position: fixed
+	top: 0
 	width: 100%
 	z-index: $z-fixed
 	background-color: rgba(#282C34,.95)
@@ -49,7 +50,7 @@ ul.c-header__menu
 				background: rgba(#FFF 0.13)
 			&:hover
 				transition: .5s ease
-				background: rgba(#FFF 0.13)
+				background-color: $base-color-background
 			& i
 				vertical-align: middle
 				font-size: 1.8rem
@@ -77,7 +78,7 @@ ul.dropdown-container
 	display: none
 	& li
 		text-align: center
-		background-color: #3D3D3D
+		background-color: $base-color-background
 		clear: both
 		width: 100%
 /*----------------------------------------------------------------------------*
@@ -118,9 +119,15 @@ ul.dropdown-container
 	$HEADER MOBILE
 *----------------------------------------------------------------------------*/
 .c-header__burguer
-	font-size: 4.5rem
+	width: 4rem
+	display: flex
+	flex-direction: column
+	justify-content: center
+	& img
+		vertical-align: middle
 	@media only screen and (min-width: $breakpoints['l'] + 1)
 		display: none
+
 /*
 ====== Estilos del popup Zoom efect======
 */

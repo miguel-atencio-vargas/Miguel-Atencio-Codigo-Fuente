@@ -1,14 +1,12 @@
 .g-container-header
 	header.c-header
 		.c-header__logo
-			a(href="#inicio")  #[img(src="./assets/images/logo.png")  ]
+			a(href='/')  #[img(src='/assets/images/logo.svg')  ]
 		ul.c-header__menu
 			include list-nav
 
-
-
 		.c-header__burguer#js-menuMovil
-			a(href="#popup" data-effect="mfp-zoom-in") #[i.icon-menu3]
+			a(href='#popup' data-effect='mfp-zoom-in') #[img(src='/assets/images/icons/menu.svg')]
 			#popup.c-popup.mfp-with-anim.mfp-hide
 				ul#js-menuPopup.c-popup__menu
 					include list-nav

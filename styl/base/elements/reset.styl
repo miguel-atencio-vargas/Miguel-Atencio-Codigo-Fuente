@@ -26,8 +26,17 @@
 html
 	-ms-text-size-adjust: 100%
 	-webkit-text-size-adjust: 100%
-	font-size: $base-font-size
-
+	font-size: $base-font-size px
+	@media only screen and (min-width: $breakpoints['s'] + 1)
+		font-size: $base-font-size - 3.5 px // 6.5px
+	@media only screen and (min-width: $breakpoints['m'] + 1)
+		font-size: $base-font-size - 3 px // 7px
+	@media only screen and (min-width: $breakpoints['l'] + 1)
+		font-size: $base-font-size - 2 px // 8px
+	@media only screen and (min-width: $breakpoints['xl'] + 1)
+		font-size: $base-font-size - 1 px // 9px
+	@media only screen and (min-width: $breakpoints['hd'] + 1)
+		font-size: $base-font-size px // 10px
 
 /**
  *
@@ -70,6 +79,7 @@ body
 	-webkit-font-smoothing: antialiased
 	-moz-osx-font-smoothing: grayscale
 	overflow-x: hidden
+	background-color: $base-color-background
 
 
 /**

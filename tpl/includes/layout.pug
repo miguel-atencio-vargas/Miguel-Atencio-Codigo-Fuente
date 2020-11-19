@@ -1,34 +1,45 @@
 doctype
-html(lang="es")
+html(lang='es')
 	head
-		meta(charset="UTF-8")
-		meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
-		meta(name="format-detection", content="telephone=no, email=no, address=no, date=no")
-		link(rel="icon" href="./assets/images/favicon.ico" type="image/ico")
-		meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+		meta(charset='UTF-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+		meta(name='format-detection', content='telephone=no, email=no, address=no, date=no')
+		link(rel='icon' href='/assets/images/favicon.ico' type='image/ico')
+		meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
 		// Icomoon
-		link(rel="stylesheet", href="assets/css/vendors/icomoon.css")
+		link(rel='stylesheet', href='/assets/css/vendors/icomoon.css')
 		// PopUp - Magnific
-		link(rel="stylesheet", href="assets/css/vendors/magnific.css")
+		link(rel='stylesheet', href='/assets/css/vendors/magnific.css')
+		// Twitter Emoji (Twemoji)
+		link(rel='stylesheet', href='/assets/css/vendors/twemoji-awesome.css')
+		// pattern.css
+		link(rel='stylesheet', href='/assets/css/vendors/pattern.min.css')
+		// animate.css
+		link(rel='stylesheet', href='/assets/css/vendors/animate.min.css')
 
 
 		block title
-			title Blog Personal
+			title Miguel Atencio Vargas
 		block variables
 
-		// Scripts Vendors Globales
-		script(src="./assets/js/vendors/jquery-1.9.1.min.js" defer)
-		script(src="./assets/js/vendors/jquery-migrate-1.2.1.min.js" defer)
-		script(src="assets/js/vendors/magnific.js" defer)
+		// Scripts Vendors 
+		script(src='/assets/js/vendors/turbolinks.js')
+		script(src='/assets/js/vendors/jquery-1.9.1.min.js' defer)
+		script(src='/assets/js/vendors/jquery-migrate-1.2.1.min.js' defer)
+		script(src='/assets/js/vendors/magnific.js' defer)
 		block vendorsJS
 		block vendorsCSS
-		// Estilos globales----
-		link(rel="stylesheet", href="assets/css/global-2.css")
-		link(rel="stylesheet", href="assets/css/global.css")
-		// Script GLOBAL------
-		script(src="./assets/js/global.js" defer)
-	body.c-block-body
+		// Estilos globales
+		link(rel='stylesheet', href='/assets/css/global-2.css')
+		link(rel='stylesheet', href='/assets/css/global.css')
+		// Script GLOBAL
+		script(src='/assets/js/global.js' defer)
+
+
+	body.c-block-body.pattern-dots-sm
+		- let skills = [{skill: 'Desarrollo Web', img: 'web-icon.svg', link: 'web-development'},{skill: 'Programación Competitiva', img: 'competitive-icon.png', link: 'competitive-programming'}, {skill: 'Estructuras de Datos', img: 'data-icon.svg', link: 'data-structure'}, {skill: 'GNU/Linux', img: 'linux-icon.svg', link: 'linux'}, {skill: 'Matemáticas y Estadística', img: 'math-icon.svg', link: 'math'}, {skill: 'Inteligencia Artificial', img: 'ia-icon.svg', link: 'ia'}, {skill: 'Arquitectura de Sistemas', img: 'arch-icon.svg', link: 'arch'}]
+		- let softSkills = [{skill: 'Ingles', img: 'english-icon.svg', link: 'english'}, {skill: 'Razonamiento y psicotecnico', img: 'logical-icon.svg', link: 'logic'}, {skill: 'Trabajo en equipo', img: 'scrum-icon.svg', link: 'scrum'}, {skill: 'Diagramas', img: 'diagram-icon.svg', link: 'diagrams'}]
 		.c-fixed
-			include header
+			include header/header
 		.g-container
 			block container

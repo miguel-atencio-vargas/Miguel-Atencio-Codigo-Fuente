@@ -1,0 +1,7 @@
+extends ../../includes/layout
+
+
+block container
+	- let articles = [{title: 'Números y cadenas de texto', link:'numbers-strings'}, {title: 'Booleanos', link: 'booleans'}]
+	- let title= 'Desarrollo Web'
+	include ../../includes/home-blog/layout-home

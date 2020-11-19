@@ -2,31 +2,31 @@ extends includes/layout
 
 block title
 	title Blog Personal
-block vendorsJS
-	//- './assets/js/turbolinks.js'
-	- let src = ['./assets/js/vendors/slick.js']
-	each link in src
-		script(type='text/javascript', src=link, defer)
-
-block vendorsCSS
-	- let href = ['./assets/css/vendors/slick.css']
-	each link in href
-		link(rel="stylesheet", href=link)
 
 block container
-	- let skills = ['Desarrollo Web', 'Programación Competitiva', 'Estructuras de Datos', 'GNU/Linux', 'Matemáticas y estadística', 'Inteligencia Artificial', 'Arquitectura de Sistemas']
-	- let softSkills = ['Ingles', 'Razonamiento y psicotecnica', 'Trabajo en equipo', 'UML']
-	.section
-		.c-home
-			.c-home-title
-				h2 BIENVENIDO A MI PORTAFOLIO
-				p En este sitio web puedes encontrar  mis proyectos y mi camino de aprendizaje donde comparto a la comunidad todas las experiencias de aprendizaje que la misma comunidad me brindó.
-				p Las areas de aprendizaje fueron:
-				for skill in skills
-					h2= skill
-				p También tuve que mejorar en habilidades como:
-				for skill in softSkills
-					h2= skill
-			.c-home-ilustration
-				img(src="./assets/images/home.svg")
+	.section.c-home
+		h1.c-home-title ¡HOLA! #[img.animate__animated.animate__bounce.animate__delay-2s(src="/assets/images/icons/emoji.svg")] SOY MIGUEL ATENCIO VARGAS
+		img.c-home-ilustration(src="/assets/images/home.png")
+		p.c-home-subtitle En este sitio podrá encontrar mis proyectos #[i.twa.twa-open-file-folder] y el camino de aprendizaje #[i.twa.twa-roller-coaster] donde comparto todas las experiencias que la comunidad #[i.twa.twa-heart] me brindó.
+		.c-home-btn-container
+			a.btn-call-to(href="#") Proyectos #[i.twa.twa-file-folder]
+			a.btn-call-to(href="#") Contáctame #[i.twa.twa-envelope]
+
+
+	.c-home-skills
+		.h2.c-home-skills-title Las áreas de aprendizaje fueron:
+		for item in skills
+			a(href='/topics/'+item.link+'/home.html')
+				h3= item.skill 
+				img.c-home-skills-icon(src="/assets/images/icons/"+item.img)
+
+
+	.c-home-softSkills
+		.h2.c-home-skills-title También tuve que mejorar en habilidades como:
+		for item in softSkills
+			a(href=item.link+'/home.html')
+				h3= item.skill 
+				img.c-home-skills-icon(src="/assets/images/icons/"+item.img)
+
+
 	.section.c-footer.fp-auto-height
